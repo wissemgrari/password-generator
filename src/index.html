@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../public/images/key.png"
+    />
+    <title>Password Generator</title>
+    <script defer src="main.js"></script>
+  </head>
+  <body class="text-white">
+    <main
+      class="w-full h-screen bg-darkBlue flex flex-col items-center justify-center relative"
+    >
+      <header class="flex gap-2 absolute top-10">
+        <h1 class="text-grey text-2xl font-lg tracking-wider">
+          Password Generator
+        </h1>
+        <img class="w-[30px]" src="../public/images/key.png" alt="key" />
+      </header>
+
+      <div class="mobile:w-[calc(100%_-_2rem)] desktop:w-[580px] space-y-4">
+        <!-- password container -->
+        <div
+          class="bg-lightBlue px-5 py-3 flex justify-between items-center gap-2"
+        >
+          <input
+            type="text"
+            class="w-full outline-none bg-transparent"
+            id="generatedPassword"
+            value="u5&1OxUjIc2W%E*9!36+"
+            readonly
+          />
+          <div class="copy-btn tooltip w-[24px] h-[24px] cursor-pointer">
+            <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+            <img src="../public/images/copy.png" alt="copy-icon" />
+          </div>
+        </div>
+        <!-- password generator -->
+        <div class="bg-lightBlue px-5 py-3 space-y-4">
+          <div class="flex justify-between font-lg">
+            <p class="text-sm">Character Length</p>
+            <p class="text-green text-xl" id="value">10</p>
+          </div>
+          <div class="slider">
+            <input
+              class="customSlider"
+              type="range"
+              min="10"
+              max="50"
+              value="0"
+              id="slider"
+            />
+          </div>
+          <div class="options">
+            <div>
+              <input type="checkbox" id="option-1" checked />
+              <label for="option-1">Include Lowercase Letters</label>
+            </div>
+            <div>
+              <input type="checkbox" id="option-2" />
+              <label for="option-2">Include Uppercase Letters</label>
+            </div>
+            <div>
+              <input type="checkbox" id="option-3" />
+              <label for="option-3">Include Numbers</label>
+            </div>
+            <div>
+              <input type="checkbox" id="option-4" />
+              <label for="option-4">Include Symbols</label>
+            </div>
+          </div>
+          <!-- Strength check  -->
+          <div
+            class="strength bg-darkBlue px-5 py-3 flex items-center justify-between"
+          >
+            <p class="text-xs text-grey font-lg">STRENGTH</p>
+            <div class="stength-level flex flex-col items-end gap-1">
+              <p id="strength" class="uppercase text-sm">very weak</p>
+              <div class="level very-weak">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+          <!-- Button -->
+          <button
+            class="w-full border-2 border-green font-lg text-sm tracking-widest text-green text-center py-2 hover:bg-green hover:text-darkBlue"
+          >
+            GENERATE &rarr;
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
