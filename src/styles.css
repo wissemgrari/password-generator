@@ -5,8 +5,8 @@
 @tailwind utilities;
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: scroll !important;
+  overflow-x: hidden !important;
   font-family: 'Nunito', sans-serif;
 }
 ::-webkit-scrollbar {

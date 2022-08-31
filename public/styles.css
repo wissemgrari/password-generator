@@ -593,16 +593,20 @@ video {
   min-height: 100vh;
 }
 
-.w-full{
-  width: 100%;
-}
-
 .w-\[30px\]{
   width: 30px;
 }
 
+.w-full{
+  width: 100%;
+}
+
 .w-\[24px\]{
   width: 24px;
+}
+
+.max-w-full{
+  max-width: 100%;
 }
 
 .cursor-pointer{
@@ -746,8 +750,8 @@ video {
 }
 
 html {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow: scroll !important;
+  overflow-x: hidden !important;
   font-family: 'Nunito', sans-serif;
 }
 
